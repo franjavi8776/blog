@@ -18,16 +18,19 @@ const Project = () => {
               className={`${video.divClass} flex flex-col gap-8 justify-center items-center cursor-pointer group `}
               onMouseEnter={(e) => {
                 const video = e.currentTarget.querySelector("video");
-                if (video) video.play();
+                if (video && video.readyState >= 3) {
+                  video.play();
+                }
               }}
               onMouseLeave={(e) => {
                 const video = e.currentTarget.querySelector("video");
-                const border =
-                  e.currentTarget.querySelector(".border-animated");
+
                 if (video) {
                   video.pause();
                   video.currentTime = 0;
                 }
+                const border =
+                  e.currentTarget.querySelector(".border-animated");
                 if (border) {
                   border.style.transform = "translate(-50%, -50%)";
                 }
