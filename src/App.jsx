@@ -1,4 +1,3 @@
-import "./App.css";
 import { Route, Routes, useLocation } from "react-router-dom";
 import About from "./components/About";
 import Contact from "./components/Contact";

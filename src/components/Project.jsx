@@ -5,8 +5,6 @@ import { videos, images } from "./videoGroups";
 const Project = () => {
   const navigate = useNavigate();
 
-  console.log(videos);
-
   return (
     <div className="w-full min-h-[100vh] bg-primary relative text-neutral">
       <h1 className="text-lg md:text-[35px] text-neutral font-title text-center pt-20">

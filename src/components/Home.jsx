@@ -12,25 +12,25 @@ const Home = () => {
   const categories = useMemo(
     () => [
       {
-        image: "./images/cable_home.png",
+        image: "/images/cable_home.png",
         offsetX: -220,
         offsetY: -210,
         size: { mobile: 150, tablet: 300, desktop: 400 },
       },
       {
-        image: "./images/mouse.png",
+        image: "/images/mouse.png",
         offsetX: 330,
         offsetY: 20,
         size: { mobile: 70, tablet: 150, desktop: 230 },
       },
       {
-        image: "./images/pc2.png",
+        image: "/images/pc2.png",
         offsetX: -400,
         offsetY: -300,
         size: { mobile: 150, tablet: 350, desktop: 550 },
       },
       {
-        image: "./images/teclado.png",
+        image: "/images/teclado.png",
         offsetX: 0,
         offsetY: 250,
         size: { mobile: 320, tablet: 600, desktop: 900 },
@@ -59,7 +59,7 @@ const Home = () => {
     const tabletOffsetMultiplier = 0.65;
 
     const rotation =
-      image === "./images/mouse.png" || image === "./images/teclado.png"
+      image === "/images/mouse.png" || image === "/images/teclado.png"
         ? "rotate(-12deg)"
         : "";
 
@@ -113,7 +113,7 @@ const Home = () => {
         className="flex flex-col items-center"
       >
         <img
-          src="./images/studio.png"
+          src="/images/studio.png"
           alt="logo"
           className=" mb-5 md:mb-10 z-10"
         />
