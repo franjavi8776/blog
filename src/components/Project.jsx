@@ -72,17 +72,15 @@ const Project = () => {
             </div>
           ))}
         </div>
-        <div className="flex justify-center flex-wrap gap-20 mt-10">
+        <h2 className="text-center">Logos</h2>
+        <div className="flex justify-center flex-wrap gap-20 my-10">
           {images.map((image, i) => (
             <div
               key={i}
-              className={`${image.divClass} flex gap-8 justify-center items-center cursor-pointer group `}
+              className={`${image.divClass} flex flex-col md:flex-row gap-8 justify-center items-center cursor-pointer group`}
             >
-              <div>
-                <img
-                  src={image.src}
-                  className={`${image.imageClass} border-t border-secondary shadow-sm shadow-secondary`}
-                />
+              <div className="overflow-hidden border-2 border-secondary">
+                <img src={image.src} className={`${image.imageClass}  `} />
               </div>
               <p
                 className={`${image.textClass} text-justify text-shadow-sm pr-5 relative`}
